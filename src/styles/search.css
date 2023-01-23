@@ -21,7 +21,7 @@
   height: 72px;
   margin: auto;
   width: 100%;
-  margin-bottom: 10vh;
+  margin-bottom: 5vh;
 }
 
 .header-location-search-container {
@@ -55,7 +55,7 @@
 .location-icon {
   margin-right: 8px;
   font-size: 20px;
-  color: #d92662;
+  color: #900;
 }
 
 .header-searchBar {

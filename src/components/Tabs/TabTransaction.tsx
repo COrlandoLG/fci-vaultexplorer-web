@@ -3,7 +3,7 @@ import React, { FC, Fragment, useState } from "react";
 import { useGlobalState } from "../../context/GlobalStateProvider";
 import { Grid, GridColumn, GridColumnMenuFilter } from '@progress/kendo-react-grid';
 import { LoanPayments } from "../../@types/global";
-import { DoRequest } from '../../utils/utilities';
+import { DoRequest } from '../../utils/axios';
 import { initialColumnsPayments } from '../../utils/global';
 
 export const TabTransaction: FC<{}> = () => {

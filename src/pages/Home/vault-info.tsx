@@ -3,17 +3,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Tabs from "../../components/Tabs/Tabs";
 import TabDashboard from "../../components/Tabs/TabDashboard";
 import TabTransaction from "../../components/Tabs/TabTransaction";
-import TabNFT from "../../components/Tabs/TabNFT";
 import TabDocuments from "../../components/Tabs/TabDocuments";
 import "../../styles/custom.css";
 import Card from 'react-bootstrap/Card';
-import Navbar from "../../components/Navbar/resume";
+import Navbar from "../../components/Navbar/index";
 import { useGlobalState } from "../../context/GlobalStateProvider";
 import { TabsType } from "../../@types/global";
 import { Zfooter } from "../../components/zfooter/zfooter";
 import { FaSearch } from 'react-icons/fa';
 import { IGlobal } from "../../@types/global";
-import { DoRequest } from "../../utils/utilities";
+import { DoRequest } from "../../utils/axios";
+import TabNFT from "../../components/Tabs/TabNFT";
 
 const style = { color: "red", fontSize: "1em" }
 const VaultInfo: React.FC = () => {
