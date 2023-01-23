@@ -3,7 +3,7 @@ import React, { FC, Fragment, useState } from "react";
 import { useGlobalState } from "../../context/GlobalStateProvider";
 import { Grid, GridColumn, GridColumnMenuFilter } from '@progress/kendo-react-grid';
 import { LenFunding } from "../../@types/global";
-import { DoRequest } from '../../utils/utilities';
+import { DoRequest } from '../../utils/axios';
 import { initialColumnsAttachments } from '../../utils/global';
 
 export const TabDocuments: FC<{}> = () => {

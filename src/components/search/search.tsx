@@ -4,7 +4,7 @@ import {useState} from 'react';
 import { useGlobalState } from "../../context/GlobalStateProvider";
 import { IGlobal } from "../../@types/global";
 import { useNavigate } from "react-router-dom";
-import { DoRequest } from "../../utils/utilities";
+import { DoRequest } from "../../utils/axios";
 
 const style = { color: "red", fontSize: "1em" }
 

@@ -35,7 +35,7 @@
   .tabs-component [role="tablist"] button:focus,
   .tabs-component [role="tablist"] button:hover {
     border-width: 1px;
-    border-color: #e9ecef #e9ecef #b41c1c;
+    border-color: #e9ecef #e9ecef #900;
   }
   
   .tabs-component [role="tablist"] button.active {
@@ -73,6 +73,11 @@
   .tabs-component.vertical [role="tablist"] button.active,
   .tabs-component.vertical [role="tablist"] button:focus,
   .tabs-component.vertical [role="tablist"] button:hover {
-    border-color: #e9ecef transparent #e9ecef #b41c1c;
+    border-color: #e9ecef transparent #e9ecef #900;
   }
   
+  .pdfViewer{
+    height: 80vh;
+    width: 100vh;
+    margin: 0 auto;
+  }
