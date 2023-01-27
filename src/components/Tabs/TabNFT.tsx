@@ -9,7 +9,7 @@ import SectionFooter from "../../pdf/SectionFooter";
 import Funding from "../../pdf/Funding";
 import FrontPage from "../../pdf/FrontPage";
 import { Image } from "@react-pdf/renderer";
-import img1 from "../../images/marque.png";
+import img1 from "../../images/cNFT.png";
 
 export const TabNFT: FC<{}> = () => {
   const { state } = useGlobalState();
@@ -49,19 +49,30 @@ export const TabNFT: FC<{}> = () => {
   
   const styles = StyleSheet.create({
     body: {
-      paddingTop: 35,
-      paddingBottom: 65,
-      paddingHorizontal: 35
-    },    
+      paddingVertical: "5vh",
+      paddingHorizontal: "5vh",
+      paddingBottom: "15vh"
+    },
+    body2: {
+      paddingVertical: "5vh",
+      paddingHorizontal: "5vh",
+      paddingBottom: "30vh"
+    },
     pageBackground: {
       position: 'absolute',
-      minWidth: '76vh',
-      minHeight: '88vh',
-      display: 'flex',
-      height: '88vh',
-      width: '76vh',
+      height:"60%",
+      marginTop: "30%",
+      marginLeft: "14%",
       zIndex: 1,
-      margin:-20
+      aspectRatio: 1
+    },
+    pageBackground2: {
+      position: 'absolute',
+      height:"70%",
+      marginTop: "12%",
+      marginLeft: "27%",
+      zIndex: 1,
+      aspectRatio: 1
     },
   });
 
@@ -72,15 +83,16 @@ export const TabNFT: FC<{}> = () => {
           <div className="pdfViewer">
             <PDFViewer width="100%" height="100%">
               <Document>
-                <Page size="A4" style={styles.body} wrap={false}>
+                <Page size="A4" style={styles.body} wrap={true}>
                   <SectionHeader />
                   <FrontPage LoanDetail={LoanDetail}/>
                   <Image src={img1} style={styles.pageBackground} />
                 </Page>
-                <Page orientation="landscape" style={styles.body} break wrap={false}>
+                <Page size="A4" orientation="landscape" style={styles.body2} break wrap={true}>
                   <SectionHeader secondary={true}>Funding</SectionHeader>
                   <Funding data={gridData}/>
                   <SectionFooter />
+                  <Image src={img1} style={styles.pageBackground2} />
                 </Page>
               </Document> 
             </PDFViewer>

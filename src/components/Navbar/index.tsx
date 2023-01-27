@@ -1,35 +1,40 @@
-import { NavLink, NavMenu, HL2 } from "./Navbar";
+import { NavLink, NavMenu } from "./Navbar";
+import logo from "../../images/logo.png";
 
 const Navbar = () => {
-  const handleClick = (event: any) => {
-    const element = document.getElementById('vault');
+  const handleClick = (id: any) => {
+    const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+  }  
   
   return (
     <>
       <NavMenu>
-        <HL2 to="/">
-          CENTURION BLOCKCHAIN
-        </HL2>
-        
-        {/* <NavMenu1> */}
-          <NavLink to="/">
-            Developers
-          </NavLink>
-          <NavLink to="/">
-            Ecosystem
-          </NavLink>
-          <NavLink to="/" onClick={handleClick}>
-            Vault Explorer
-          </NavLink>
-          <NavLink to="/">
-            Centurion NFT
-          </NavLink>
-        {/* </NavMenu1> */}
-      </NavMenu> 
+        <NavLink to="/" onClick={()=>{handleClick("landing")}}>
+          <img id="logo" src={logo} alt="Logo" />
+        </NavLink>        
+        <NavLink className={"navText"} to="/" onClick={()=>{handleClick("blockchain")}}>
+          Blockchain Services
+        </NavLink>
+        <NavLink className={"navText"} to="/" onClick={()=>{handleClick("vault")}}>
+          Vault Explorer
+        </NavLink>
+        <NavLink className={"navText"} to="/" onClick={()=>{handleClick("fintech")}}>
+          Fintech Services
+        </NavLink>
+        <NavLink className={"navText"} to="/" onClick={()=>{handleClick("cNFT")}}>
+          Centurion cNFT
+        </NavLink>
+        <NavLink className={"navText"} to="/" onClick={()=>{handleClick("network")}}>
+          Centurion Network
+        </NavLink>        
+        <NavLink className={"navText"} to="/">
+          Developers
+        </NavLink>
+        {/* <NavMenu1></NavMenu1> */}
+      </NavMenu>
     </>
   );
 };
