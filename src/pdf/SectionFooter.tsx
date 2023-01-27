@@ -32,8 +32,7 @@ const styles = StyleSheet.create({
 const SectionFooter = ({ children= '', secondary = false, style = {} }) => (
     <View style={styles.footer} fixed>
     <Text>
-      Generated {getDate()} by the Centurion Blockchain web
-      application
+      Generated {getDate()} By Centurion Blockchain Part of the Centurion Network
     </Text>
     <Text style={styles.pageNumber}
       fixed

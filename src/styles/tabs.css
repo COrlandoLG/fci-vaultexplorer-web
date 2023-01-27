@@ -1,5 +1,4 @@
 .App {
-    font-family: sans-serif;
     text-align: center;
     width: 70vw;
     margin: 0 auto;
@@ -35,7 +34,7 @@
   .tabs-component [role="tablist"] button:focus,
   .tabs-component [role="tablist"] button:hover {
     border-width: 1px;
-    border-color: #e9ecef #e9ecef #900;
+    border-color: #e9ecef #e9ecef #0078D4;
   }
   
   .tabs-component [role="tablist"] button.active {
@@ -73,7 +72,7 @@
   .tabs-component.vertical [role="tablist"] button.active,
   .tabs-component.vertical [role="tablist"] button:focus,
   .tabs-component.vertical [role="tablist"] button:hover {
-    border-color: #e9ecef transparent #e9ecef #900;
+    border-color: #e9ecef transparent #e9ecef #0078D4;
   }
   
   .pdfViewer{

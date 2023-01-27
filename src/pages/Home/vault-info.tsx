@@ -14,6 +14,7 @@ import { FaSearch } from 'react-icons/fa';
 import { IGlobal } from "../../@types/global";
 import { DoRequest } from "../../utils/axios";
 import TabNFT from "../../components/Tabs/TabNFT";
+import { LanText } from "../../components/Navbar/Navbar";
 
 const style = { color: "red", fontSize: "1em" }
 const VaultInfo: React.FC = () => {
@@ -71,10 +72,6 @@ const VaultInfo: React.FC = () => {
   }
 
   React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  React.useEffect(() => {
     const element = document.getElementById('details');
     if (element)
       element.scrollIntoView({ behavior: 'smooth' });
@@ -82,50 +79,45 @@ const VaultInfo: React.FC = () => {
   
   return (
     <>      
-      <section id="loans">
-        <Navbar />
-        <div className="pt-1">
-          <div className="pLocation">
-            <div className="BSS">Investments</div>
-          </div>
-
-          <div className="header">        
-            <div className="header-right">
-              <div className="header-location-search-container">
-                <div className="header-searchBar">
-                  <span><FaSearch style={style}/></span>
-                  <input id="account"
-                    className="search-input"
-                    placeholder="Search by Account, Prev Account"
-                    onKeyDown={handleKeyPress} onChange={handleChangeAccount}
-                  />
-                </div>
+      <Navbar />
+      <section id="loans" className="section">
+        <LanText>
+          INVESTMENTS
+        </LanText>
+        <div className="header">        
+          <div className="header-right">
+            <div className="header-location-search-container">
+              <div className="header-searchBar">
+                <span><FaSearch style={style}/></span>
+                <input id="account"
+                  className="search-input"
+                  placeholder="Search by Account, Prev Account"
+                  onKeyDown={handleKeyPress} onChange={handleChangeAccount}
+                />
               </div>
             </div>
           </div>
-
-          <div className="Lol">
-            {
-              state.loans&& state.loans.length>0&&
-              state.loans.map(function(d){
-                return (
-                  <div className="LolD" key={d.loanUid} onClick={()=>{
-                    handleLocation(d.loanUid)
-                  }}>
-                    {" "}
-                    <p>{d.loanAccount}</p>
-                  </div>
-                  )
-                }
-              )
-            }
-          </div>
+        </div>
+        <div className="Lol">
+          {
+            state.loans&& state.loans.length>0&&
+            state.loans.map(function(d){
+              return (
+                <div className="LolD" key={d.loanUid} onClick={()=>{
+                  handleLocation(d.loanUid)
+                }}>
+                  <p>{d.loanAccount}</p>
+                </div>
+                )
+              }
+            )
+          }
         </div>
       </section>
 
       {
         Object.keys(state).length > 0 && state.loanDetail!==null && state.loanDetail!==undefined &&state.loanDetail?.uid!==""&&state.loanDetail!.uid.length>0&&
-        <section id="details">
+        <section id="details" className="section">
           <div className="vault-info">
             <Card className="text-center">
             

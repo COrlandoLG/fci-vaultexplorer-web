@@ -22,7 +22,12 @@ const styles = StyleSheet.create({
     fontSize: 12,
     textAlign: 'center',
     marginTop: 10,
-  }
+  },
+  children: {
+    paddingTop: 20,
+    fontSize: 20,
+    textAlign: 'center'
+  },
 })
 
 const SectionHeader = ({ children= '', secondary = false, style = {} }) => (
@@ -40,7 +45,7 @@ const SectionHeader = ({ children= '', secondary = false, style = {} }) => (
       <Text style={styles.header} fixed>Date of NFT: {getDate()}</Text>
       <Text style={styles.title}>NFT Certified by Centurion Blockchain</Text>
       <Text style={styles.author}>Instrument Serviced by: FCI</Text>
-      <Text>{children}</Text>
+      <Text style={styles.children}>{children}</Text>
   </View>
 )
 

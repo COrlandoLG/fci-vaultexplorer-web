@@ -2,7 +2,7 @@ import { FC, Fragment } from "react";
 import { LoanDetail } from "../@types/global";
 import { View, StyleSheet, Text } from '@react-pdf/renderer'
 import { currencyFormat, GetEnumDescription, percentFormat } from "../utils/utilities";
-import { BooleanEnum, LoanStatusForFCIWebEnum, NoteTypeEnum, PriorityEnum, RateTypeEnum } from "../utils/Enums";
+import { LoanStatusForFCIWebEnum, NoteTypeEnum, PriorityEnum, RateTypeEnum } from "../utils/Enums";
 
 type PropsType = {
     LoanDetail: LoanDetail
@@ -30,9 +30,6 @@ const FrontPage:FC<PropsType> = (props) => {
                 <Text style={styles.subtitle}>
                     Lender Name: {props.LoanDetail.borrowerFullName.replace(/(\r\n|\n|\r)/gm,"")}
                 </Text>
-                {/* <Text style={styles.text}>
-                    On Hold: {GetEnumDescription(props.LoanDetail.isOnHold?1:0,BooleanEnum)}
-                </Text> */}
                 <Text style={styles.text}>
                     Loan Status: {GetEnumDescription(props.LoanDetail.status,LoanStatusForFCIWebEnum)}
                 </Text>

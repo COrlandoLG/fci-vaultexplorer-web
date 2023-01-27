@@ -1,5 +1,5 @@
 export const config = {
-  primaryColor: '#900',
+  primaryColor: '#0078D4',
   primaryRGB: [0, 44, 113],
   accentColor: '#F3B229',
   blackColor: '#000000',
