@@ -1,15 +1,23 @@
 import { FC, Fragment } from "react";
 import { LenFunding } from "../@types/global";
-import { View } from '@react-pdf/renderer'
+import { View, StyleSheet } from '@react-pdf/renderer';
 import Subtext from "./Subtext";
 import Table from "../pdf/Table";
 import { currencyFormat, percentFormat } from "../utils/utilities";
+import Coin from "../pdf/Coin";
 
 type PropsType = {
     data: Array<LenFunding>
 }
 
 const Funding:FC<PropsType> = (props) => {
+    const styles = StyleSheet.create({
+        coin: {
+            left: 580,
+            bottom: 120
+        },
+    });
+
     return (
         <Fragment>
             <View>
@@ -39,6 +47,7 @@ const Funding:FC<PropsType> = (props) => {
                         ))}
                     </Table.Body>                    
                 </Table>
+                <Coin style={styles.coin}/>
             </View>
             {props.data.length <= 0 && (<Subtext>No Funding provided</Subtext>)}
         </Fragment>

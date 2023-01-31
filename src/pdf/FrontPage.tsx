@@ -1,8 +1,9 @@
 import { FC, Fragment } from "react";
 import { LoanDetail } from "../@types/global";
-import { View, StyleSheet, Text } from '@react-pdf/renderer'
+import { View, StyleSheet, Text } from '@react-pdf/renderer';
 import { currencyFormat, GetEnumDescription, percentFormat } from "../utils/utilities";
 import { LoanStatusForFCIWebEnum, NoteTypeEnum, PriorityEnum, RateTypeEnum } from "../utils/Enums";
+import Coin from "../pdf/Coin";
 
 type PropsType = {
     LoanDetail: LoanDetail
@@ -21,6 +22,10 @@ const FrontPage:FC<PropsType> = (props) => {
             fontSize: 18,
             paddingHorizontal: 12,
             margin: 10
+        },
+        coin: {
+            left: 350,
+            top: 370
         },
     });
     
@@ -78,6 +83,8 @@ const FrontPage:FC<PropsType> = (props) => {
                 <Text style={styles.text}>
                     Deferred Unpaid Late Charges: {currencyFormat(props.LoanDetail.deferredLateCharges)}
                 </Text>
+
+                <Coin style={styles.coin}/>
             </View>
         </Fragment>
     );

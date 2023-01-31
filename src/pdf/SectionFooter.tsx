@@ -10,7 +10,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     position: 'absolute',
     fontSize: config.normalFontSize,
-    bottom: 15,
+    bottom: 30,
     left: 50,
     right: 50,
     textAlign: 'left',

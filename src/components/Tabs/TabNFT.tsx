@@ -9,7 +9,7 @@ import SectionFooter from "../../pdf/SectionFooter";
 import Funding from "../../pdf/Funding";
 import FrontPage from "../../pdf/FrontPage";
 import { Image } from "@react-pdf/renderer";
-import img1 from "../../images/cNFT.png";
+import Certificate from "../../images/Certificate.png";
 
 export const TabNFT: FC<{}> = () => {
   const { state } = useGlobalState();
@@ -53,27 +53,23 @@ export const TabNFT: FC<{}> = () => {
       paddingHorizontal: "5vh",
       paddingBottom: "15vh"
     },
-    body2: {
+    body2: { 
       paddingVertical: "5vh",
       paddingHorizontal: "5vh",
       paddingBottom: "30vh"
     },
     pageBackground: {
       position: 'absolute',
-      height:"60%",
-      marginTop: "30%",
-      marginLeft: "14%",
-      zIndex: 1,
-      aspectRatio: 1
+      height: '125%',
+      width: '116.5%',
+      zIndex: 1
     },
     pageBackground2: {
       position: 'absolute',
-      height:"70%",
-      marginTop: "12%",
-      marginLeft: "27%",
-      zIndex: 1,
-      aspectRatio: 1
-    },
+      height: '153.75%',
+      width: '107.75%',
+      zIndex: 1
+    }
   });
 
   return (
@@ -86,13 +82,13 @@ export const TabNFT: FC<{}> = () => {
                 <Page size="A4" style={styles.body} wrap={true}>
                   <SectionHeader />
                   <FrontPage LoanDetail={LoanDetail}/>
-                  <Image src={img1} style={styles.pageBackground} />
+                  <Image src={Certificate} style={styles.pageBackground} />
                 </Page>
                 <Page size="A4" orientation="landscape" style={styles.body2} break wrap={true}>
                   <SectionHeader secondary={true}>Funding</SectionHeader>
                   <Funding data={gridData}/>
                   <SectionFooter />
-                  <Image src={img1} style={styles.pageBackground2} />
+                  <Image src={Certificate} style={styles.pageBackground2} />
                 </Page>
               </Document> 
             </PDFViewer>
