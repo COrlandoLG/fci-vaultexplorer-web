@@ -13,9 +13,12 @@ import card6 from "../../images/profit-increase-chart.svg";
 import bc1 from "../../images/blockchain.webp";
 import bc2 from "../../images/CenturionBlockchain.png";
 import bc3 from "../../images/blockchain-works.png";
+import gif from "../../images/cNFT.gif";
 import { SiBlockchaindotcom, SiHiveBlockchain } from 'react-icons/si';
 import { CgToolbox } from 'react-icons/cg';
 import '../../styles/rerousel.css';
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 export const Landing: React.FC = () => {
 
@@ -109,10 +112,12 @@ export const Landing: React.FC = () => {
           <LanTextMin>
             The World's first dedicated Financial Blockchain company to integrate Financial Systems, Hedge Funds, Investors, Loan Servicers, Mortgage Brokers, Loan Originators and Fiat Investments with a uniquely designed Blockchain (CENTURION) for the secure, transparent, auditable delivery of Financial Services, tracking every transaction on out integrated financial partners.
           </LanTextMin>
-          <img
-            className="d-block mx-auto h-50 w-50 mb-5 pb-5"
-            src={bc3}
-            alt="Centurion Network" />
+          <Zoom>
+            <img
+              className="d-block mx-auto h-50 w-50 mb-5 pb-5"
+              src={bc3}
+              alt="Centurion Network" />
+          </Zoom>
         </DivCenter80>
       </section>
       
@@ -125,6 +130,7 @@ export const Landing: React.FC = () => {
           
             <LanTextMin className="d-inline">Integrated to:&nbsp;</LanTextMin>
             <img className="d-inline rerousel" src="https://is3-ssl.mzstatic.com/image/thumb/Purple112/v4/02/65/11/026511bd-43f0-930a-0748-179fba32a70f/AppIcon-1x_U007emarketing-0-10-0-85-220.png/256x256bb.jpg" alt="FCI Logo" />
+            <img className="d-inline rerousel" src={gif} alt="cNFT Logo" />
           </DivCenter80>
         </div>
       </section>
@@ -160,10 +166,12 @@ export const Landing: React.FC = () => {
           <LanTextMin>
             How all the Centurion applications and blockchains interconnect to create an advanced and unique financial environment ful of opportunities to our investors.
           </LanTextMin>
-          <img
-            className="d-block mx-auto h-50 w-50 mb-5 pb-5"
-            src={bc2}
-            alt="Centurion Network" />
+          <Zoom>
+            <img
+              className="d-block mx-auto h-50 w-50 mb-5 pb-5"
+              src={bc2}
+              alt="Centurion Network" />
+          </Zoom>
         </DivCenter80>
       </section>
 
