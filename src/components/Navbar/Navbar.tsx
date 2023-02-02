@@ -1,9 +1,7 @@
 import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
-import headerimage from "../../images/fortcanning.svg";
 
 export const Nav = styled.nav`
-  background: url(${headerimage}) no-repeat center center fixed;
   min-height: 100vh;
   width: 100%;
   display: grid-flex;
@@ -17,11 +15,21 @@ export const NavLink = styled(Link)`
   text-decoration: ${(props) => {
     return props.style ? (isActive) => (isActive ? "underline" : "none") : "none";
   }};
-  padding: 0.2rem 0.8rem;
+  padding: 0.4rem 0.8rem;
   height: 100%;
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
+  border: 0px solid #0078D4;
+  border-top-left-radius: 10px 10px;
+  border-bottom-left-radius: 10px 10px;
+  border-top-right-radius: 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  &.active:not(.logo), &:hover:not(.logo) {
+    color: #fff;
+    background-color: #0078D4;
+    font-weight: bold;
+  }
 `;
 
 export const NavMenu = styled.div`
@@ -74,8 +82,6 @@ export const LanTextMin = styled.div`
   font-weight: bolder;
   margin-top: 5vh;
   margin-bottom: 5vh;
-  text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
-             1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -83,5 +89,6 @@ export const LanTextMin = styled.div`
 
 export const DivCenter80 = styled.div`
   width:80%;
+  height:100%;
   margin:auto;
 `;

@@ -57,7 +57,12 @@ div#root section {
 }
 
 .section {
-    padding-top: 6rem;
+    padding-top: 7rem;
+    /* Created with https://www.css-gradient.com */
+    background: #FFFFFF;
+    background: -webkit-linear-gradient(top left, #FFFFFF, #999999);
+    background: -moz-linear-gradient(top left, #FFFFFF, #999999);
+    background: linear-gradient(to bottom right, #FFFFFF, #999999);
 }
 
 #logo{
@@ -69,19 +74,6 @@ div#root section {
     color: #0078D4;
 }
 
-.navText{
-    background-color: #fff;
-    border: 0px solid #0078D4;
-    border-top-left-radius: 10px 10px;
-    border-bottom-left-radius: 10px 10px;
-    border-top-right-radius: 10px 10px;
-    border-bottom-right-radius: 10px 10px;
+.card{
+    background-color: transparent;
 }
-
-.navText:hover {
-    color: #fff;
-    background-color: #0078D4;
-    font-weight: bold;
-}
-
-
