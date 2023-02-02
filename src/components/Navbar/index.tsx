@@ -2,35 +2,29 @@ import { NavLink, NavMenu } from "./Navbar";
 import logo from "../../images/logo.png";
 
 const Navbar = () => {
-  const handleClick = (id: any) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }  
   
   return (
     <>
       <NavMenu>
-        <NavLink to="/" onClick={()=>{handleClick("landing")}}>
+        <NavLink className={"logo"} to="/" >
           <img id="logo" src={logo} alt="Logo" />
-        </NavLink>        
-        <NavLink className={"navText"} to="/" onClick={()=>{handleClick("blockchain")}}>
+        </NavLink>
+        <NavLink to="/blockchain" >
           Blockchain Services
         </NavLink>
-        <NavLink className={"navText"} to="/" onClick={()=>{handleClick("vault")}}>
+        <NavLink to="/vault">
           Vault Explorer
         </NavLink>
-        <NavLink className={"navText"} to="/" onClick={()=>{handleClick("fintech")}}>
+        <NavLink to="/fintech">
           Fintech Services
         </NavLink>
-        <NavLink className={"navText"} to="/" onClick={()=>{handleClick("cNFT")}}>
+        <NavLink to="/cNFT">
           Centurion cNFT
         </NavLink>
-        <NavLink className={"navText"} to="/" onClick={()=>{handleClick("network")}}>
+        <NavLink to="/network">
           Centurion Network
         </NavLink>        
-        <NavLink className={"navText"} to="/">
+        <NavLink to="/VaultInfo">
           Developers
         </NavLink>
         {/* <NavMenu1></NavMenu1> */}
