@@ -4,13 +4,6 @@
   display: flex;
   align-items: center;
   margin: auto;
-  width: 50%;
-}
-
-.header-logo {
-  height: 27px;
-  max-width: 140px;
-  margin-right: 24px;
 }
 
 .header-right {
@@ -62,7 +55,7 @@
 .header-searchBar {
   display: flex;
   flex: 2;
-  margin-left: 5vh;
+  margin-left: 3vh;
 }
 
 .search-icon {
@@ -76,7 +69,7 @@
   width: 60%;
   font-size: 14px;
   outline: none;
-  margin-left: 5vh;
+  margin-left: 3vh;
 }
 .profile-wrapper {
   display: flex;

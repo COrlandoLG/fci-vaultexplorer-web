@@ -25,13 +25,16 @@ const FrontPage:FC<PropsType> = (props) => {
         },
         coin: {
             left: 350,
-            top: 370
+            top: 400
         },
     });
     
     return (
         <Fragment>
             <View>
+                <Text style={styles.subtitle}>
+                    Private Centurion Blockchain:
+                </Text>                
                 <Text style={styles.subtitle}>
                     Lender Name: {props.LoanDetail.borrowerFullName.replace(/(\r\n|\n|\r)/gm,"")}
                 </Text>

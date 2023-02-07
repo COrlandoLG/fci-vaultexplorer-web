@@ -1,62 +1,5 @@
-import { NavLink as Link } from "react-router-dom";
 import styled from "styled-components";
-
-export const Nav = styled.nav`
-  min-height: 100vh;
-  width: 100%;
-  display: grid-flex;
-  background-size: cover;  
-`;
-
-export const NavLink = styled(Link)`
-  color: #0078D4;
-  display: inline;
-  margin: 10px 5px;
-  text-decoration: ${(props) => {
-    return props.style ? (isActive) => (isActive ? "underline" : "none") : "none";
-  }};
-  padding: 0.4rem 0.8rem;
-  height: 100%;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1rem;
-  border: 0px solid #0078D4;
-  border-top-left-radius: 10px 10px;
-  border-bottom-left-radius: 10px 10px;
-  border-top-right-radius: 10px 10px;
-  border-bottom-right-radius: 10px 10px;
-  &.active:not(.logo), &:hover:not(.logo) {
-    color: #fff;
-    background-color: #0078D4;
-    font-weight: bold;
-  }
-`;
-
-export const NavMenu = styled.div`
-  display: flex;
-  position:fixed;
-  width: 100%;
-  white-space: nowrap;
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
-export const NavMenu1 = styled.div`
-  margin-bottom:20px;
-  margin-right:20px;
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-  /* Second Nav */
-  /* margin-right: 24px; */
-  /* Third Nav */
-  /* width: 100vw;
-
-  white-space: nowrap; */
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
-`;
+import Certificate from "../../images/Certificate.png";
 
 export const LanText = styled.div`
   word-wrap: break-word;
@@ -70,7 +13,7 @@ export const LanText = styled.div`
   text-shadow: 2px 0 #fff, -2px 0 #fff, 0 2px #fff, 0 -2px #fff,
              1px 1px #fff, -1px -1px #fff, 1px -1px #fff, -1px 1px #fff;
   @media screen and (max-width: 768px) {
-    display: none;
+    // display: none;
   }
 `;
 
@@ -83,12 +26,14 @@ export const LanTextMin = styled.div`
   margin-top: 5vh;
   margin-bottom: 5vh;
   @media screen and (max-width: 768px) {
-    display: none;
+    // display: none;
   }
 `;
 
-export const DivCenter80 = styled.div`
-  width:80%;
-  height:100%;
+export const DivCenterImage = styled.div`
+  width:50%;
   margin:auto;
+  background-image:url(${Certificate});
+  background-size: 100% 100%;
+  padding: 50px 50px 0vh 50px;
 `;

@@ -1,8 +1,3 @@
-.vault-info{
-    width: 80%;
-    margin: auto;
-}
-
 .Lol{
     display: grid;
     grid-template-columns: auto auto auto auto;
@@ -13,12 +8,10 @@
     align-items: center;
     margin-bottom: 10vh;
 }
-.LolD{
+
+.menu{
     height: 50px;
     width: 260px;
-    border: 2px solid #0078D4;
-   
-    border-radius: 7px;
    
     cursor: pointer;
     margin-top: 30px;
@@ -26,48 +19,58 @@
     font-weight: 500;
 }
 
-.LolD:hover{
-    box-shadow: 4px 4px 4px #999999;
-}
-.LolD>p{
+.menu>p {
+    position: relative;
+    display: block;
+    padding: 5px;
     margin-top: 10px;
- margin-left: 5px;
+    margin-left: 5px;
+}
+  
+.menu p::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #fff, #D4AF37, #fff);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+  
+.menu p:hover::before {
+    transform: scaleX(1);
+}
+
+.menu[data-animation="center"] p::before {
+    transform-origin: center;
 }
 
 .zfot {
-    background-color: #0078D4;
     color:#fff;
-    position: fixed;
     text-align: center;
     bottom: 0;
     width: 100%;
     padding: 0.3rem;
     font-weight: 600;
-  }
+}
 
 #root {
     height: 100vh;
-    overflow-y: scroll;
-    scroll-snap-type: y mandatory;
+    /* overflow-y: scroll;  */
+    /* scroll-snap-type: y mandatory; */
 }
 
 div#root section {
     min-height: 100vh;
-    scroll-snap-align: start;    
+    /* scroll-snap-align: start;     */
 }
 
 .section {
     padding-top: 7rem;
-    /* Created with https://www.css-gradient.com */
-    background: #FFFFFF;
-    background: -webkit-linear-gradient(top left, #FFFFFF, #999999);
-    background: -moz-linear-gradient(top left, #FFFFFF, #999999);
-    background: linear-gradient(to bottom right, #FFFFFF, #999999);
-}
-
-#logo{
-    width: 125px;
-    padding: 0rem 1rem;
 }
 
 .primaryColor{
@@ -76,4 +79,74 @@ div#root section {
 
 .card{
     background-color: transparent;
+}
+
+.navHome{
+    background-color: transparent!important;
+    height: 100px;
+    font-weight: bold;
+}
+
+.navNotHome{
+    background-color: #D4AF37!important;
+    font-weight: bold;
+}
+  
+.animation {
+    height:50px;
+    overflow:hidden;
+    text-transform: uppercase;
+    margin-left: 1rem;
+}
+  
+.animation > div > div {
+    padding: 0.25rem 0.75rem;
+    height: 2.81rem;
+    margin-bottom: 2.81rem;
+    display:inline-block;
+}
+  
+.animation div:first-child {
+    animation: text-animation 20s infinite;
+}
+  
+@keyframes text-animation {
+    0% {margin-top: 0;}
+    10% {margin-top: 0;}
+    20% {margin-top: -5.62rem;}
+    30% {margin-top: -5.62rem;}
+    40% {margin-top: 0;}
+    60% {margin-top: 0;}
+    70% {margin-top: -5.62rem;}
+    80% {margin-top: -5.62rem;}
+    90% {margin-top: 0;}
+    100% {margin-top: 0;}
+}
+
+.shi {
+    font-weight: 600;
+    background: linear-gradient(90deg, #fff, #D4AF37, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+}
+  
+@keyframes shine {
+    0% {
+      background-position: 0;
+    }
+    60% {
+      background-position: 600px;
+    }
+    100% {
+      background-position: 600px;
+    }
+}
+
+.carousel-indicators [data-bs-target] {
+    background-color: transparent;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    background-image: none;
 }

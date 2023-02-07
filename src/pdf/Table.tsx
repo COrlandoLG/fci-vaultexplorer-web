@@ -1,4 +1,3 @@
-import React from 'react'
 import { View, StyleSheet, Text } from '@react-pdf/renderer'
 import { config } from './config'
 
@@ -11,7 +10,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: config.primaryColor,
+    backgroundColor: config.primaryColorTable,
     color: '#fff',
     padding: 3
   },

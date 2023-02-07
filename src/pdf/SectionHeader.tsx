@@ -43,8 +43,8 @@ const SectionHeader = ({ children= '', secondary = false, style = {} }) => (
       style
     ]}>
       <Text style={styles.header} fixed>Date of NFT: {getDate()}</Text>
-      <Text style={styles.title}>NFT Certified by Centurion Blockchain</Text>
-      <Text style={styles.author}>Instrument Serviced by: FCI</Text>
+      <Text style={styles.title}>cNFT Certified by Centurion Blockchain</Text>
+      <Text style={styles.author}>Instrument Serviced by: FCI Lender Services, Inc.</Text>
       <Text style={styles.children}>{children}</Text>
   </View>
 )
