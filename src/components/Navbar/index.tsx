@@ -1,36 +1,31 @@
-import { NavLink, NavMenu } from "./Navbar";
-import logo from "../../images/logo.png";
+import "../../styles/custom.css";
+import { Container, Nav, Navbar } from "react-bootstrap";
 
-const Navbar = () => {
+const NavbarTop = ({ classToShow = 'navHome navbar-dark bg-dark' }) => {
   
   return (
     <>
-      <NavMenu>
-        <NavLink className={"logo"} to="/" >
-          <img id="logo" src={logo} alt="Logo" />
-        </NavLink>
-        <NavLink to="/blockchain" >
-          Blockchain Services
-        </NavLink>
-        <NavLink to="/vault">
-          Vault Explorer
-        </NavLink>
-        <NavLink to="/fintech">
-          Fintech Services
-        </NavLink>
-        <NavLink to="/cNFT">
-          Centurion cNFT
-        </NavLink>
-        <NavLink to="/network">
-          Centurion Network
-        </NavLink>        
-        <NavLink to="/VaultInfo">
-          Developers
-        </NavLink>
-        {/* <NavMenu1></NavMenu1> */}
-      </NavMenu>
+      <Navbar collapseOnSelect expand="lg" className={classToShow} fixed="top">
+        <Container>
+          <Navbar.Brand href="/#">CENTURION FINTECH</Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="me-auto">              
+            </Nav>
+            <Nav>
+              <Nav.Link href="/#blockchain">Blockchains Services</Nav.Link>
+              <Nav.Link href="/#fintech">Fintech Services</Nav.Link>
+              <Nav.Link href="/#cNFT">cNFT</Nav.Link>
+              <Nav.Link href="/#network">Network</Nav.Link>
+              <Nav.Link href="/#pricing">Developers</Nav.Link>
+              <Nav.Link href="/vault">Vault</Nav.Link>
+              <Nav.Link href="/vault">Explorer</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
     </>
   );
 };
 
-export default Navbar;
+export default NavbarTop;
